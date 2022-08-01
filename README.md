@@ -18,6 +18,18 @@ Enjoy!
 - CanCanCan
 - RSpec and Capybara Testing Library
 - Bullet gem - to look out for N+1 queries
+- PostgreSQL
+
+## Milestones
+
+- [x] Milestone 1: Group Task-setup
+- [] Milestone 2: Group Task - Login Page and Registration Page
+- [] Milestone 3: Team Member #2 Task - Recipes List
+- [] Milestone 4: Team Member #1 Task - Public recipe list
+- [] Milestone 5: Team Member #2 Task - Recipe details
+- [] Milestone 6: Group Task - General Shopping List view
+- [] Milestone 7: Group Task - Create navigation menu
+- [] Milestone 8: Group Task - No N+1 queries
 
 
 ## Getting Started
@@ -54,6 +66,14 @@ Locate the directory in your file explorer
 
 `rubocop --auto-correct-all` or
 `rubocop -A`
+
+### Run linter for styling
+
+`npx stylelint "**/*.{css,scss}"`
+
+### To autocorrect offenses with stylelint we use
+
+`npx stylelint "**/*.{css,scss}" --fix`
 
 
 ## Testing
