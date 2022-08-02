@@ -1,6 +1,11 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Recipes</h1>
+<p>This is the recipe name <%= @recipe.name %></p>
+<p>This is the recipe description: <%= @recipe.description %></p>
+<p>This is to delete recipe below:</p>
+
+<%= button_to "Destroy this recipe", @recipe, method: :delete %>
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
