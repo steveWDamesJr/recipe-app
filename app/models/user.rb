@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+<<<<<<< HEAD
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -11,4 +12,8 @@ class User < ApplicationRecord
  def recent_recipes
   recipes.includes(:user).limit(3).o(created_at: :desc)
  end
+=======
+  devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable, :confirmable
+  has_many :foods, dependent: :destroy
+>>>>>>> origin/food-list
 end

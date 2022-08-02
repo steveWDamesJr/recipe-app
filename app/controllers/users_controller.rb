@@ -1,15 +1,14 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: %i[ show edit destroy ]
-  before_action :authenticate_user!
+
 
   # GET /users or /users.json
   def index
-    @users = User.all
+    @user = current_user
   end
 
   # GET /users/1 or /users/1.json
   def show
-    @user = User.find(params[:id])
+    @user = current_user
     @recipes = @recipe.recent_recipes.incluedes(:user)
   end
 
