@@ -7,6 +7,7 @@ class UsersController < ApplicationController
   # GET /users/1 or /users/1.json
   def show
     @user = current_user
+    @recipes = @user.recent_recipes.where(user: @user)
   end
 
   # GET /users/1/edit

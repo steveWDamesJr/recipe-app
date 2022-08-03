@@ -4,5 +4,6 @@ Rails.application.routes.draw do
 
   resources :users
   resources :foods, only: [:index, :new, :create, :destroy]
+  resources :recipes
 
 end
