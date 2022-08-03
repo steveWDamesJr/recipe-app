@@ -1,15 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
 <h1>Recipes</h1>
-<p>This is the recipe name <%= @recipe.name %></p>
-<p>This is the recipe description: <%= @recipe.description %></p>
-<p>This is to delete recipe below:</p>
 
-<%= button_to "Destroy this recipe", @recipe, method: :delete %>
+<%# <%= button_to "Destroy this recipe", @recipe, method: :delete %>
 
 <div id="recipes">
   <% @recipes.each do |recipe| %>
-    <%= render recipe %>
+    <div>
+      <p><%= recipe.name %></p>
+      <p><%= recipe.description %></p>
+      <%= button_to "Delete", recipe_path(recipe), method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
     <p>
       <%= link_to "Show this recipe", recipe %>
     </p>

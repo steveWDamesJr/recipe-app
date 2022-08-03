@@ -1,3 +1,3 @@
 class Food < ApplicationRecord
-  belonds_to :user
+  belongs_to :user
 end
