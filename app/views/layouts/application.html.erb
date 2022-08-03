@@ -10,9 +10,9 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class="h-screen">
+    <p class="notice" style="color: green"><%= notice %></p>
+    <p class="alert",style="color: red"><%= alert %></p>
     <% if user_signed_in? %>
       <p class="signed-in-as">Signed in as <%= current_user.email %></p>
       <%= link_to "Sign out", destroy_user_session_path, class: 'nav-link', data: { turbo_method: :delete } %>
@@ -20,6 +20,8 @@
     <% else %>
       <a href="/users/sign_in">Sign in</a>
     <% end %>
+    <main class="h-full">
     <%= yield %>
+    </main>
   </body>
 </html>
