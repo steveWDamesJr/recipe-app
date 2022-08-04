@@ -2,16 +2,19 @@
 
 <h1 class="w-full mb-10 text-lg font-bold text-center text-body-dark">Recipes</h1>
 
-<div id="recipes" class="flex flex-col items-center">
+<div id="recipes" class="flex flex-col items-center px-8">
 <div>
   <% @recipes.each do |recipe| %>
     <div class="border-green-800">
-    <div class="font-semibold text-l"><%= recipe.name %></div>
-    <div class="py-4 font-normal text-l"><%= button_to "REMOVE", recipe_path(recipe), method: :delete, data: { confirm: "Are you sure?" } %></div>
+    <div class="font-semibold text-l"><%= link_to (recipe.name), recipe_path(recipe)%></div>
+    <div class="py-4 text-red-600 text-l"><%= button_to "REMOVE", recipe_path(recipe), method: :delete, data: { confirm: "Are you sure?" } %></div>
     </div>
     <div>
       <p class="px-3 py-4 text-sm font-normal text-left break-words bg-light text-textColor"><%= recipe.description %></p>
     </div>
+    <div class="border"></div>
+     <br />
+     <br />
   <% end %>
   </div>
 </div>
