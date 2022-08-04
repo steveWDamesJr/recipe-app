@@ -1,0 +1,21 @@
+<% if user_signed_in? %>
+  <p class="signed-in-as">Signed in as <%= current_user.name %></p>
+  <%= link_to "Sign out", destroy_user_session_path, class: 'nav-link', data: { turbo_method: :delete } %>
+  <%# we would use this part to render the header and navigation to various pages %>
+<% else %>
+  <a href="/users/sign_in">Sign in</a>
+<% end %>
+<header>
+  <div className="md:flex items-center justify-between px-6 border-b border-solid h-14 border-[#3C3C3C]/[.12] dark:border-[#545454]/[.48] w-full dark:text-white/[.87] font-bold hidden">
+    <a href="/">
+      <%= image_tag 'logo.png', alt: 'logo' %>
+    </a>
+
+    <nav className="flex gap-16">
+      <a href="/">Components</a>
+      <a href="/about">About</a>
+      <a href="/license">License</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </div>
+</header>
