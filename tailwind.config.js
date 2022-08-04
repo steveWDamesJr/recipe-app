@@ -3,7 +3,7 @@ module.exports = {
     './app/views/**/*.html.erb',
     './app/helpers/**/*.rb',
     './app/assets/stylesheets/**/*.css',
-    './app/javascript/**/*.js'
+    './app/javascript/**/*.js','./*.html', './ecommerce/*.html', './assets/**/*.js'
   ],
   theme: {
     extend: {
@@ -17,4 +17,5 @@ module.exports = {
       },
     },
   },
-}
+  plugins: [require("tailgrids/plugin")],
+};
