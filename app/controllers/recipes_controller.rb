@@ -19,6 +19,17 @@ class RecipesController < ApplicationController
   # GET /recipes/1/edit
   def edit; end
 
+  # PATCH/PUT /recipes/1 or /recipes/1.json
+  def update
+    respond_to do |format|
+      if @recipe.update(recipe_params)
+        format.html { redirect_to recipe_url(@recipe), notice: "Recipe was successfully updated." }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # POST /recipes or /recipes.json
   def create
     @user = current_user
