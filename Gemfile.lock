@@ -87,6 +87,8 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
+    cssbundling-rails (1.1.1)
+      railties (>= 6.0.0)
     database_cleaner (2.0.1)
       database_cleaner-active_record (~> 2.0.0)
     database_cleaner-active_record (2.0.1)
@@ -121,6 +123,8 @@ GEM
     json (2.6.2)
     launchy (2.5.0)
       addressable (~> 2.7)
+    letter_opener (1.8.1)
+      launchy (>= 2.2, < 3)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -282,12 +286,14 @@ DEPENDENCIES
   bootsnap
   cancancan
   capybara
+  cssbundling-rails (~> 1.1)
   database_cleaner
   debug
   devise
   importmap-rails
   jbuilder
   launchy
+  letter_opener
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.3, >= 7.0.3.1)
