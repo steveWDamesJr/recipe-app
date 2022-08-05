@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.2'
+# ruby '3.0.2'
 
 # Authentication
 gem 'devise'
@@ -61,8 +61,8 @@ group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'database_cleaner'
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'ffi', '~> 1.15', '>= 1.15.5'
   gem 'launchy'
-  # gem 'ffi', '~> 1.15', '>= 1.15.5'
   gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
