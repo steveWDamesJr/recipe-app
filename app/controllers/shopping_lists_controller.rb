@@ -1,5 +1,4 @@
 class ShoppingListsController < ApplicationController
-  
   def index
     @shopping_lists = Food.find_by_sql(
       "SELECT foods.name, foods.price, foods.quantity, foods.measurement_unit
