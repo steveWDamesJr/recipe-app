@@ -9,7 +9,11 @@ class RecipesController < ApplicationController
   # GET /recipes/1 or /recipes/1.json
   def show
     @recipe = Recipe.includes(:user).find(params[:id])
-    @ingredients = Food.find_by_sql("SELECT foods.name, foods.price, recipe_foods.quantity FROM foods INNER JOIN recipe_foods ON foods.id = recipe_foods.food_id WHERE foods.user_id = #{current_user.id} AND recipe_foods.recipe_id = #{@recipe.id}")
+    @ingredients = Food.find_by_sql(
+      "SELECT foods.name, foods.price, recipe_foods.quantity
+      FROM foods INNER JOIN recipe_foods ON foods.id = recipe_foods.food_id
+      WHERE foods.user_id = #{current_user.id} AND recipe_foods.recipe_id = #{@recipe.id}"
+    )
   end
 
   # GET /recipes/new
