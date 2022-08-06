@@ -3,10 +3,9 @@ require 'rails_helper'
 RSpec.describe 'Test New recipe page', type: :feature do
   describe 'GET recipe index page' do
     before :each do
-     @user = FactoryBot.create(:user)
-     sign_in @user
-     @recipe = FactoryBot.create(:recipe, user: @user)
-
+      @user = FactoryBot.create(:user)
+      sign_in @user
+      @recipe = FactoryBot.create(:recipe, user: @user)
     end
     scenario 'shows the correct content' do
       visit recipes_path
@@ -32,6 +31,6 @@ RSpec.describe 'Test New recipe page', type: :feature do
       scenario 'See description' do
         expect(page).to have_content('Pizza recipe')
       end
-    end  
+    end
   end
 end
