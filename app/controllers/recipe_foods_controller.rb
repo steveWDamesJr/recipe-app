@@ -16,19 +16,20 @@ class RecipeFoodsController < ApplicationController
 
     respond_to do |format|
       if @recipe_food.save
-        format.html { redirect_to recipe_path(@recipe), notice: 'Ingredient was successfully created.' }
+        format.html { redirect_to recipe_path(@recipe) }
       else
-        format.html { render :new, status: :unprocessable_entity }
+        format.html { render :new, alert: 'Ingredient was not added' }
       end
     end
   end
 
   # DELETE /recipe_foods/1 or /recipe_foods/1.json
   def destroy
+    @recipe = Recipe.find(params[:recipe_id])
     @recipe_food.destroy
 
     respond_to do |format|
-      format.html { redirect_to recipe_foods_url, notice: 'Recipe food was successfully destroyed.' }
+      format.html { redirect_to recipe_path(@recipe), notice: 'Ingredient was successfully deleted.' }
     end
   end
 
