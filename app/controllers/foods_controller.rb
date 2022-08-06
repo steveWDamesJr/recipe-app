@@ -18,7 +18,7 @@ class FoodsController < ApplicationController
 
     respond_to do |format|
       if @food.save
-        format.html { redirect_to foods_path }
+        format.html { redirect_to foods_path, notice: 'Food was successfully created.' }
       else
         format.html { render :new, alert: 'Food was not created.' }
       end
@@ -30,7 +30,7 @@ class FoodsController < ApplicationController
     @food.destroy
 
     respond_to do |format|
-      format.html { redirect_to foods_path }
+      format.html { redirect_to foods_path, notice: 'Food was successfully deleted.' }
     end
   end
 
