@@ -29,7 +29,7 @@
             $ <%= ingredient.price * ingredient.quantity %>
           </td>
           <td class="px-3 py-4 text-sm font-normal text-left text-red-600 underline break-words bg-light">
-            Remove
+            <%= button_to "Remove", recipe_recipe_food_path(recipe, ingredient.ingredient_id), method: :delete, data: { confirm: "Are you sure?" } %>
           </td>
         </tr>
       <% end %>
