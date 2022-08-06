@@ -39,7 +39,9 @@ To get a local copy up and running follow these simple example steps.
 
 ## Pre-requisites
 Make sure you have Ruby and Rails installed on your computer. If not, you can follow this [tutorial](https://guides.rubyonrails.org/getting_started.html#creating-a-new-rails-project) to install them.
+
 If you don't have PostgreSQL installed, you can follow this [tutorial](https://www.postgresql.org/download/) to install it.
+
 If you don't have yarn installed, you can follow this [tutorial](https://classic.yarnpkg.com/en/docs/install/#debian-stable) to install it.
   
 ## Usage
