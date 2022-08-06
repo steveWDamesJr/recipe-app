@@ -22,14 +22,22 @@ Enjoy!
 
 ## Milestones
 
-- [x] Milestone 1: Group Task-setup
-- [] Milestone 2: Group Task - Login Page and Registration Page
-- [] Milestone 3: Team Member #2 Task - Recipes List
-- [] Milestone 4: Team Member #1 Task - Public recipe list
-- [] Milestone 5: Team Member #2 Task - Recipe details
-- [] Milestone 6: Group Task - General Shopping List view
-- [] Milestone 7: Group Task - Create navigation menu
-- [] Milestone 8: Group Task - No N+1 queries
+- [x] Milestone 1: Set up a Kanban board of all project tasks
+- [x] Milestone 2: Set up repository on GitHub using Gitflow.
+- [x] Milestone 3: Read a [UML class diagram](https://github.com/microverseinc/curriculum-rails/blob/main/recipe-app/images/recipe_erd_2_members.png) and create all classes outlined in separate.rb files
+- [x] Milestone 4: Follow the layout of [wireframes](https://github.com/microverseinc/curriculum-rails/blob/main/recipe-app/buisness_requirements.md) provided. 
+- [x] Milestone 5: Personalize the rest of the design including colors, typographies, spacings, etc.
+- [x] Milestone 6: Add login page and registration page: built with Devise.
+- [x] Milestone 7: Create food list that displays a list of food added by the logged-in user as in the wireframe and displays the quantity of a given food. Leads to a form that allows users to add new food.
+- [x] Milestone 8: Create recipes list that displays a list of recipes created by the logged-in user as in the wireframe. Leads to recipe details. If the user is the owner of the recipe, user can to delete recipe.
+- [x] Milestone 9: Add public recipe list that displays a list of all public recipes ordered by newest as in the wireframe. Leads to recipe details.
+- [x] Milestone 10: Add recipe details: If the recipe is public or the user is the owner of the recipe, displays the recipe details as in the wireframe. If the user is the owner of the recipe, links to the form that allows the user to add new food.
+- [x] Milestone 11: Create General shopping list view  that shows the list of food that is missing for all recipes of the logged-in user, compares the list of food for all recipes with the general food list of that user. Counts the total food items and total price of the missing food.
+- [x] Milestone 12:  Ensure no N+1 queries happening.
+- [x] Milestone 13: Create Navigation menu that allows users to open all pages created.
+- [x] Milestone 14: Set up Devise for authentication.
+- [x] Milestone 15: Set up RSpec and Capybara testing libraries.
+- [x] Milestone 16: debug rubocob linter errors
 
 
 ## Getting Started
